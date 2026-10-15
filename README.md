@@ -2,8 +2,7 @@
 
 Static, single-file portfolio (`index.html`). No build step.
 
-## Run locally
-Open `index.html` in a browser, or run `python3 -m http.server 8000` and visit http://localhost:8000.
+
 
 ## Deploy on GitHub Pages
 1. Create a repository (e.g. `VinayakAKattimani.github.io` for a root URL, or `portfolio`).
