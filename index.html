@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vinayak Kattimani — AI Engineer</title>
+<meta name="description" content="Vinayak Kattimani, AI and Python engineer building LLM applications, RAG, voice and telephony AI, and FastAPI backends. Flagship: Thenflo.">
+<meta property="og:title" content="Vinayak Kattimani — AI Engineer">
+<meta property="og:description" content="LLM applications, RAG, voice AI and FastAPI backends. Flagship: Thenflo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307101c'/%3E%3Cpath d='M14 16l12 32 6-14M50 16L34 48' stroke='%2322d3ee' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b14;--bg2:#0c1424;--tx:#e8eef7;--mu:#8b99b0;--cy:#22d3ee;--vi:#8b7cf6;--ln:rgba(148,180,220,.16);--gl:rgba(14,22,40,.62);--ok:#4ade80;--pl:#f5b45a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#070b14}}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+:focus-visible{outline:2px solid var(--cy);outline-offset:3px;border-radius:4px}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 50% at 75% 20%,#0f2540 0,transparent 70%),radial-gradient(50% 40% at 10% 80%,#161235 0,transparent 70%),var(--bg)}
+#bg canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.95}
+.grid{position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(var(--ln) 1px,transparent 1px) 0 0/100% 48px,linear-gradient(90deg,var(--ln) 1px,transparent 1px) 0 0/64px 100%;transform:perspective(500px) rotateX(62deg);transform-origin:bottom;mask-image:linear-gradient(transparent,#000);opacity:.5}
+main,header,footer{position:relative;z-index:1}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(14px + env(safe-area-inset-top,0px)) 24px 14px;display:flex;align-items:center;gap:20px;transition:.3s}
+nav.s{background:rgba(7,11,20,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln);padding-top:calc(8px + env(safe-area-inset-top,0px));padding-bottom:8px}
+.vk{font-weight:700;font-size:1.25rem;text-decoration:none;color:var(--cy);border:1px solid var(--cy);border-radius:8px;padding:2px 9px;letter-spacing:.04em}
+.links{display:flex;gap:4px;margin-left:auto;align-items:center}
+.links a{text-decoration:none;padding:6px 11px;border-radius:99px;color:var(--mu);font-size:.9rem}
+.links a:hover,.links a.on{color:var(--tx);background:rgba(34,211,238,.1)}
+.avail{display:flex;align-items:center;gap:7px;color:var(--mu)}
+.avail i{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+#menu{display:none;margin-left:auto;background:none;border:1px solid var(--ln);color:var(--tx);border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+@media(max-width:900px){#menu{display:block}.avail{display:none}.links{display:none;position:fixed;top:60px;left:12px;right:12px;flex-direction:column;align-items:stretch;background:rgba(10,16,30,.96);border:1px solid var(--ln);border-radius:14px;padding:10px}.links.open{display:flex}.links a{padding:12px}}
+section{padding:110px 6vw;max-width:1280px;margin:0 auto}
+h1{font-size:clamp(2.6rem,7vw,5.8rem);line-height:1.02;margin:.3em 0;letter-spacing:-.03em;font-weight:700}
+h2{font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.1;margin:.2em 0 .5em;letter-spacing:-.02em}
+.hl{color:var(--cy);background:linear-gradient(var(--cy),var(--cy)) 0 100%/100% 2px no-repeat}
+.eb{color:var(--cy)}
+p.lead{color:var(--mu);font-size:1.12rem;max-width:56ch}
+#home{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:30px;padding-top:130px}
+@media(max-width:900px){#home{grid-template-columns:1fr}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:99px;border:1px solid var(--ln);text-decoration:none;background:none;color:var(--tx);font:inherit;font-weight:500;cursor:pointer;transition:.25s}
+.btn:hover{border-color:var(--cy);transform:translateY(-2px)}
+.btn.p{background:var(--cy);color:#04121a;border-color:var(--cy)}
+.panel{background:var(--gl);border:1px solid var(--ln);border-radius:14px;backdrop-filter:blur(12px);padding:16px 18px;line-height:2;color:var(--mu);justify-self:end;max-width:320px}
+.panel b{color:var(--cy);font-weight:500}
+.scroll{position:absolute;bottom:26px;left:6vw;color:var(--mu);display:flex;align-items:center;gap:10px}
+.scroll i{width:1px;height:38px;background:linear-gradient(var(--cy),transparent);animation:dr 2s infinite}
+@keyframes dr{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw}
+@media(max-width:900px){.ab{grid-template-columns:1fr}}
+.prin{border-left:1px solid var(--ln);padding-left:26px}
+.prin div{padding:14px 0;border-bottom:1px solid var(--ln)}
+.prin div b{display:block;font-weight:500}
+.prin span{color:var(--mu);font-size:.95rem}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chip{border:1px solid var(--ln);background:none;color:var(--mu);border-radius:99px;padding:7px 14px;font:inherit;font-size:.88rem;cursor:pointer}
+.chip[aria-pressed=true],.chip.on{color:#04121a;background:var(--cy);border-color:var(--cy)}
+input[type=search],.ask input{background:var(--gl);border:1px solid var(--ln);color:var(--tx);border-radius:10px;padding:9px 14px;font:inherit;min-width:200px}
+.sk{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.sk.det{grid-template-columns:1fr}
+.card{background:var(--gl);border:1px solid var(--ln);border-radius:14px;padding:16px;text-align:left;color:inherit;font:inherit;cursor:pointer;transition:.25s;width:100%}
+.card:hover{border-color:rgba(34,211,238,.5)}
+.sk .n{display:flex;justify-content:space-between;gap:8px;font-weight:500}
+.stars{position:relative;display:inline-block;height:18px;line-height:0;margin:8px 0 2px}
+.stars svg{display:block;height:18px;width:90px}
+.stars .f{position:absolute;left:0;top:0;overflow:hidden;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.stars .f svg{width:90px;max-width:none}
+.extra{display:none;color:var(--mu);font-size:.9rem;margin-top:8px}
+.card.open .extra,.det .extra{display:block}
+.note{color:var(--mu);font-size:.85rem}
+#thenflo{max-width:none;padding:120px 5vw;background:linear-gradient(transparent,rgba(12,20,36,.78) 12%,rgba(12,20,36,.78) 92%,transparent)}
+.tf{max-width:1280px;margin:0 auto}
+.tfh{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:end}
+.tfh h2{font-size:clamp(3rem,9vw,7.5rem);margin:0;letter-spacing:-.04em}
+.tag{display:inline-block;border-radius:99px;padding:2px 10px;font-size:.72rem;font-family:'JetBrains Mono',monospace;border:1px solid}
+.tag.v{color:var(--ok);border-color:rgba(74,222,128,.45)}.tag.a{color:var(--pl);border-color:rgba(245,180,90,.45)}.tag.c{color:var(--vi);border-color:rgba(139,124,246,.5)}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:44px 0;border-top:1px solid var(--ln)}
+.four div{padding:22px 22px 8px 0}.four h3{margin:0 0 6px;font-size:1rem;color:var(--cy);font-weight:500}.four p{margin:0;color:var(--mu);font-size:.93rem}
+@media(max-width:900px){.four{grid-template-columns:1fr 1fr}}@media(max-width:560px){.four{grid-template-columns:1fr}}
+.stage{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;perspective:1400px}
+@media(max-width:900px){.stage{grid-template-columns:1fr}}
+.glass{background:var(--gl);border:1px solid var(--ln);border-radius:18px;padding:18px;backdrop-filter:blur(12px)}
+#arch{transform:rotateX(4deg);transform-origin:50% 100%}
+svg text{fill:var(--tx);font-family:'Space Grotesk',sans-serif;font-size:12.5px;pointer-events:none}
+.nd{cursor:pointer;outline:none}
+.nd rect{fill:rgba(16,26,46,.95);stroke:rgba(148,180,220,.35);transition:.3s}
+.nd:hover rect,.nd:focus rect,.nd.sel rect{stroke:var(--cy)}
+.nd.dim{opacity:.28}.nd.dim,.nd{transition:opacity .4s}
+.nd.cn rect{stroke-dasharray:4 3;stroke:var(--vi)}
+.ed{stroke:rgba(148,180,220,.25);stroke-width:1.4;fill:none;transition:.4s}
+.ed.hot{stroke:var(--cy);stroke-width:2.2;stroke-dasharray:6 6;animation:fl 1s linear infinite}
+@keyframes fl{to{stroke-dashoffset:-12}}
+#det h4{margin:6px 0;font-size:1.3rem}#det p{color:var(--mu);margin:6px 0;font-size:.94rem}
+.chat{display:flex;flex-direction:column;gap:10px;min-height:200px;max-height:330px;overflow:auto;padding:4px}
+.m{padding:10px 14px;border-radius:12px;max-width:90%;font-size:.95rem}
+.m.u{align-self:flex-end;background:rgba(34,211,238,.14)}.m.a{background:rgba(255,255,255,.05)}
+.src{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--vi);margin-top:6px;display:block}
+.ask{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.ask input{flex:1}
+.vz{display:flex;gap:4px;align-items:center;height:34px}.vz i{width:4px;height:6px;background:var(--cy);border-radius:2px}
+.vz.on i{animation:eq .8s ease-in-out infinite alternate}
+@keyframes eq{to{height:30px}}
+.tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+#techd{margin-top:12px;color:var(--mu);min-height:3em}
+.pj{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.pc{transform-style:preserve-3d;transition:transform .15s,border-color .25s;display:flex;flex-direction:column;gap:8px;cursor:default}
+.pc h3{margin:0;font-size:1.1rem}.pc p{margin:0;color:var(--mu);font-size:.92rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{font-size:.72rem;font-family:'JetBrains Mono',monospace;color:var(--cy);border:1px solid var(--ln);border-radius:6px;padding:1px 7px}
+.pc a{color:var(--cy);text-decoration:none;font-size:.9rem;margin-top:auto}
+.tl{position:relative;margin-left:10px;padding-left:34px;border-left:1px solid var(--ln)}
+.tl .ln{position:absolute;left:-1px;top:0;width:2px;height:0;background:var(--cy);box-shadow:0 0 12px var(--cy);transition:height .2s}
+.te{position:relative;padding:0 0 36px}.te:before{content:"";position:absolute;left:-40px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--cy)}
+.te.ph:before{border-color:var(--mu)}.te h3{margin:2px 0;font-weight:500}.te p{margin:0;color:var(--mu);max-width:60ch}
+#contact{text-align:center;padding-bottom:70px}
+#contact h2{font-size:clamp(2rem,5.5vw,4.6rem);max-width:15em;margin:.2em auto}
+#contact .btns{justify-content:center}
+#cv{width:140px;height:140px;margin:0 auto 10px;display:block}
+footer{border-top:1px solid var(--ln);padding:26px 6vw;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;color:var(--mu);font-size:.9rem}
+footer a{text-decoration:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+@media(max-width:1180px){.avail{display:none}}
+.prov{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:30px 0 0;border:1px solid var(--ln);border-radius:14px;overflow:hidden;background:var(--gl)}
+.prov div{padding:14px 18px;border-right:1px solid var(--ln)}.prov b{display:block;color:var(--cy);font-weight:500;font-size:.72rem}.prov span{font-size:.95rem}
+details{border-bottom:1px solid var(--ln);padding:16px 0}summary{cursor:pointer;font-size:1.15rem;font-weight:500;list-style:none;display:flex;gap:16px;align-items:baseline}summary::-webkit-details-marker{display:none}summary i{font-style:normal;color:var(--cy);font-family:'JetBrains Mono',monospace;font-size:.8rem}details p{color:var(--mu);max-width:70ch;margin:10px 0 0 40px}details[open] summary{color:var(--cy)}
+</style></head>
+<body>
+<div id="bg" aria-hidden="true"><canvas id="dots"></canvas><div class="grid"></div></div>
+<nav id="nav" aria-label="Primary">
+<a class="vk" href="#home" aria-label="VK — back to top">VK</a>
+<button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#about">About</a><a href="#ai">AI</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#thenflo">Thenflo</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+<span class="avail mono"><i></i>Open to roles</span>
+<a href="https://github.com/VinayakAKattimani" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub ↗</a>
+<a id="resumeLink" href="#" hidden target="_blank" rel="noopener">Resume</a>
+</div></nav>
+<main>
+<section id="home">
+<div>
+<p class="mono eb rv">Vinayak Kattimani · Karnataka, India</p>
+<h1 class="rv">I Build <span class="hl">AI Systems</span> That Go Beyond Chat.</h1>
+<p class="lead rv">I'm Vinayak Kattimani, an AI and Python engineer. I build LLM-powered applications, retrieval (RAG) pipelines, conversational and voice AI, and the FastAPI backends that run them.</p>
+<div class="btns rv"><a class="btn p" href="#thenflo">Explore Thenflo</a><a class="btn" href="#projects">Explore My Projects</a><a class="btn" href="https://github.com/VinayakAKattimani" target="_blank" rel="noopener">View GitHub ↗</a></div>
+</div>
+<div class="panel mono rv" role="note" aria-label="Decorative labels, not live telemetry">SYSTEM: <b>AI ENGINEERING</b><br>FOCUS: <b>APPLIED AI / LLMs</b><br>EXPLORING: <b>RETRIEVAL + VOICE AI</b><br>FEATURED BUILD: <b>THENFLO</b></div>
+<div class="scroll mono"><i></i>Scroll</div>
+</section>
+
+<section id="about"><div class="ab">
+<div class="rv"><p class="mono eb">About</p><h2>Engineering Intelligence Into Applications.</h2>
+<p class="lead">I'm an AI and Python engineer. I treat a language model as one component in a system: the useful work is grounding answers in knowledge, shaping context, wiring models and voice behind clean APIs, and packaging it so it runs.</p></div>
+<div class="prin rv" id="prin"></div></div></section>
+<section id="ai"><p class="mono eb rv">AI engineering</p><h2 class="rv">How I build AI applications.</h2><p class="lead rv">A language model is only one part of an AI product. Most of the engineering is in what surrounds it.</p><div class="rv" style="margin-top:30px"><details open><summary><i>01</i>Frame the problem</summary><p>Before picking a model I decide what a good answer looks like: who is asking, what they need, and what the system must never get wrong. That shapes every later choice.</p></details><details><summary><i>02</i>Prompt and context design</summary><p>Prompts set role, tone and boundaries. Conversation history is carried forward and trimmed so follow-up questions stay coherent, and I iterate on prompts against real example questions to keep answers consistent.</p></details><details><summary><i>03</i>Retrieval-augmented generation (RAG)</summary><p>Models do not know your documents. I ingest files, split them into chunks, embed them and store them in a vector database (Qdrant). At question time the closest chunks are retrieved and passed to the model as context, which grounds answers in source material and reduces invented detail.</p></details><details><summary><i>04</i>Model and provider integration</summary><p>LLM calls live in their own service behind an adapter layer, so Groq, OpenAI or a local Ollama model can be swapped through configuration without touching the rest of the application. Responses are streamed so users see output quickly.</p></details><details><summary><i>05</i>Voice and telephony</summary><p>Speech-to-text (Whisper, ElevenLabs) turns audio into text, the same conversation pipeline produces the answer, and text-to-speech (Kokoro, ElevenLabs) speaks it back. Calls come in over a real phone line through Twilio.</p></details><details><summary><i>06</i>APIs, validation and packaging</summary><p>FastAPI services with Pydantic validation, JWT authentication and Swagger documentation, endpoints tested in Postman, and every service containerised with Docker Compose.</p></details><details><summary><i>07</i>Designing for failure</summary><p>Irrelevant retrieval, provider timeouts, noisy audio and context overflow are normal. Each needs a fallback path rather than just a happy path.</p></details></div></section>
+
+<section id="skills"><p class="mono eb rv">Skills</p><h2 class="rv">What I work with.</h2>
+<p class="note">Self-assessed on a 5-point scale: a snapshot of where I am, not a benchmark.</p>
+<div class="ctl" id="skf" role="group" aria-label="Filter skills by category"></div>
+<div class="ctl"><input type="search" id="sks" placeholder="Search skills" aria-label="Search skills"><button class="chip" id="skv" aria-pressed="false">Detailed view</button></div>
+<div class="sk" id="skg" aria-live="polite"></div></section>
+
+<section id="projects"><p class="mono eb rv">Other work</p><h2 class="rv">More of what I've built.</h2>
+
+<div class="ctl" id="pf" role="group" aria-label="Filter projects"></div><div class="pj" id="pg"></div></section>
+
+<section id="thenflo"><div class="tf">
+<p class="mono eb">Flagship · Thenflo</p>
+<div class="tfh"><h2>Thenflo</h2><div class="btns" style="margin:0"><a class="btn p" href="https://github.com/VinayakAKattimani/thenflo" target="_blank" rel="noopener">View Source Code ↗</a><a class="btn" href="#arch">Technical Breakdown</a></div></div>
+<p class="lead" style="margin-top:18px">An LLM-powered conversational AI project: text and voice conversations backed by document retrieval, split into independently runnable FastAPI services. </p><div class="prov mono"><div><b>LLM</b><span>Groq · OpenAI · Ollama</span></div><div><b>STT</b><span>Whisper · ElevenLabs</span></div><div><b>TTS</b><span>Kokoro · ElevenLabs</span></div><div><b>Telephony</b><span>Twilio</span></div><div><b>Retrieval</b><span>Qdrant</span></div><div><b>Backend</b><span>FastAPI · Docker</span></div></div>
+<div class="four">
+<div><h3>The problem</h3><p>Useful assistants need relevant answers, preserved context and consistent behaviour — plus speech, retrieval and provider integrations beyond plain text generation.</p></div>
+<div><h3>The approach</h3><p>Separate services for gateway, auth, conversation, knowledge, LLM and audio, so each responsibility is isolated and the LLM provider can change independently.</p></div>
+<div><h3>Engineering considerations</h3><p>Context handling in the conversation service, retrieval over a vector store, streamed LLM responses, JWT auth, Pydantic validation, env-based configuration, Docker Compose.</p></div>
+<div><h3>What it demonstrates</h3><p>Integrating AI components into an application, rather than using an LLM as a standalone chat box. No performance or accuracy results are claimed.</p></div></div>
+
+<div class="ctl" role="group" aria-label="Thenflo workflows"><button class="chip on" data-wf="all">Full architecture</button><button class="chip" data-wf="chat">Text chat</button><button class="chip" data-wf="rag">RAG ingestion + search</button><button class="chip" data-wf="voice">Voice</button><button class="chip" id="rst">Reset</button></div>
+<p class="note">Select a workflow or click a node. The diagram is explanatory; individual requests may not follow exactly this path.</p>
+<div class="stage">
+<div class="glass"><svg id="arch" viewBox="0 0 760 400" role="img" aria-label="Thenflo service architecture diagram" width="100%"></svg></div>
+<div class="glass" id="det" aria-live="polite"><p class="mono eb">Component</p><h4>Select a node</h4><p>Hover, focus or click a node to read its role, the data it handles, and what can go wrong.</p></div></div>
+
+<div class="stage" style="margin-top:18px">
+<div class="glass"><p class="mono eb">Portfolio simulation — not live</p>
+<p class="note">Canned answers and a small hard-coded “knowledge base”. No calls are made to Groq, OpenAI, ElevenLabs or a vector database. Please don't enter sensitive information.</p>
+<div class="chat" id="chat"></div>
+<form class="ask" id="askf"><input id="q" aria-label="Ask the sample assistant" placeholder="Ask about how Thenflo works…" autocomplete="off"><button class="btn p">Send</button></form>
+<div class="ctl"><button class="chip" data-s="How does retrieval work?">How does retrieval work?</button><button class="chip" data-s="How does voice work?">How does voice work?</button><button class="chip" data-s="Which LLM provider is used?">Which LLM provider?</button></div></div>
+<div class="glass"><p class="mono eb">Voice pathway (illustrative)</p>
+<p class="mono" style="color:var(--mu)">Call / speech → STT → conversation → TTS → voice</p>
+<div class="vz" id="vz" aria-hidden="true"></div><button class="chip" id="vb" aria-pressed="false" style="margin-top:12px">Animate voice flow</button>
+<p class="mono eb" style="margin-top:22px">Retrieved context</p><div id="ctx" class="note">Ask a question to see which sample chunks would be retrieved.</div></div></div>
+
+<div class="tech" id="tech" role="group" aria-label="Thenflo technologies"></div><p id="techd" aria-live="polite">Select a technology to see its role.</p>
+</div></section>
+
+<section id="journey"><p class="mono eb rv">Journey</p><h2 class="rv">Learning by building.</h2>
+
+<div class="tl" id="tl"><div class="ln" id="tln"></div></div></section>
+
+<section id="contact"><canvas id="cv" aria-hidden="true" width="280" height="280"></canvas>
+<h2>Have a problem worth solving? Let's build something intelligent.</h2>
+<p class="lead" style="margin:0 auto">I'm interested in opportunities where AI, software engineering, and practical problem-solving come together.</p>
+<div class="btns"><a class="btn p" href="mailto:vinayarunkattimani@gmail.com">Email ↗</a><a class="btn" href="https://www.linkedin.com/in/vinayakkattimani/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn" href="https://github.com/VinayakAKattimani" target="_blank" rel="noopener">GitHub ↗</a></div>
+</section>
+</main>
+<footer><span><a class="vk" href="#home">VK</a> &nbsp;Vinayak Kattimani · AI &amp; Python Engineer</span>
+<span><a href="https://github.com/VinayakAKattimani" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/vinayakkattimani/" target="_blank" rel="noopener">LinkedIn</a> · © <span id="yr"></span> · <a href="#home">Back to top ↑</a></span></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ===== CENTRAL CONFIG — edit here ===== */
+const R="https://github.com/VinayakAKattimani/";
+const CONFIG={
+resumeUrl:null,
+education:null,
+principles:[["Understand first","Define the problem before choosing the model."],["Ground the answer","Use retrieval so responses draw on relevant material."],["Wire it properly","Connect model capabilities to validated backend APIs."],["Explore voice","Speech in, speech out, same conversational backend."],["Ship it runnable","Containerise services and test endpoints."],["Iterate","Learn through implementation and revision."]],
+/* rating 0-5 in 0.5 steps (any decimal works). ev = repo evidence */
+skills:[
+["Python","Programming",4.5,"Primary language across Thenflo, the FastAPI backend and analysis notebooks.","Thenflo, data projects"],
+["SQL","Programming",4.0,"Analytical SQL on PostgreSQL for failure-pattern case studies.","transaction_failure_analysis"],
+["Java","Programming",3.5,"Spring Boot services and Selenium/TestNG automation.","jira-lite, E-banking tests"],
+["JavaScript","Programming",3.0,"React front ends for several projects.","Billing-Software, Thrillio.io"],
+["LLM Integration","AI / ML",4.0,"Provider-agnostic LLM layer: Groq, OpenAI and local Ollama models via LangChain, with streamed responses.","Thenflo"],
+["Prompt Engineering","AI / ML",4.0,"Prompts and context handling designed for relevant, consistent answers that keep conversation history.","Thenflo"],
+["RAG","AI / ML",3.5,"Document ingestion, chunking, embeddings and vector search service.","Thenflo"],
+["Conversational AI","AI / ML",4.0,"Conversation orchestration with optional knowledge lookup.","Thenflo"],
+["Voice & Telephony","AI / ML",3.5,"Whisper and ElevenLabs for STT, Kokoro and ElevenLabs for TTS, plus phone calls through Twilio.","Thenflo"],
+["Predictive Modelling","Data",3.5,"Logistic regression loan-approval model with ROC-AUC evaluation.","LoanTap case study"],
+["FastAPI","Backend",4.0,"Gateway and microservices with Swagger docs.","Thenflo, Social Media Backend"],
+["REST APIs","Backend",4.0,"Service-to-service and client APIs.","Thenflo"],
+["Authentication (JWT)","Backend",3.5,"Registration, login and JWT in a dedicated auth service.","Thenflo"],
+["PostgreSQL","Backend",3.5,"Persistence for services and SQL analysis.","thenflo, jira-lite"],
+["Spring Boot","Backend",3.5,"Project-management and bookmarking backends.","jira-lite, Thrillio.io"],
+["Docker","Tools",3.5,"Docker Compose for the multi-service platform.","Thenflo"],
+["Git / GitHub","Tools",4.0,"All projects versioned on GitHub.","All projects"],
+["Swagger / Postman","Tools",3.5,"Interactive API docs with Swagger and endpoint testing with Postman.","Thenflo"],
+["Pandas / Scikit-learn","Data",4.0,"Data cleaning, feature engineering and modelling.","LoanTap"],
+["Power BI","Data",4.0,"KPI dashboard from SQL-derived metrics.","last-mile-delivery-analysis"]],
+projects:[
+["Thenflo","AI & LLM","Multi-service conversational AI platform: LLMs, retrieval, voice and telephony behind FastAPI.",["Python", "FastAPI", "RAG", "LLMs"],"#thenflo"],
+["Social Media Backend","Python Backend","A social-media application backend built with Python and FastAPI.",["Python", "FastAPI"],"social_media_backend_application_using_fastapi"],
+["LoanTap Loan Analysis","Data Analytics","Data-analytics case study on personal-loan approval: cleaning, EDA, feature engineering, logistic regression and ROC-AUC evaluation.",["Python", "Pandas", "Scikit-learn"],"LoanTap-Personal-Loan-Underwriting-Case-Study"],
+["Last-Mile Delivery Analysis","Data Analytics","Power BI dashboard on SQL-based KPIs to find delivery-time patterns and causes of delay.",["Power BI", "SQL"],"last-mile-delivery-analysis"],
+["Transaction Failure Analysis","Data Analytics","SQL analysis of 20,000+ digital transactions, with five case studies on failure patterns across banks, merchants and time.",["SQL", "PostgreSQL"],"transaction_failure_analysis"],
+["Jira-Lite Project Management","Java & Testing","Jira-inspired project management backend built with real-world architecture principles.",["Java", "Spring Boot", "PostgreSQL"],"jira-lite-project-management-system"],
+["E-Banking Test Automation","Java & Testing","Selenium/TestNG framework with Page Object Model and data-driven tests against an intentionally unstable backend.",["Java", "Selenium", "TestNG"],"E-banking-testing_automation"]],
+timeline:[
+["Foundations","Python, SQL and data analysis: cleaning, exploration and dashboards.","Phase 01",false],
+["Backend engineering","Java with Spring Boot, Python with FastAPI, and automated testing.","Phase 02",false],
+["Applied AI","LLM integration, prompt engineering and retrieval-augmented generation.","Phase 03",false],
+["Thenflo","Bringing it together: conversational AI with voice, telephony and a service-based backend.","Phase 04",false]],
+tech:[["Python","Implementation language of every backend service."],["FastAPI","Gateway and services, with interactive Swagger docs and Pydantic validation."],["LLMs","Answer generation, isolated in a dedicated service with streamed output."],["Groq & OpenAI","Hosted model providers, selectable through configuration."],["LangChain & Ollama","Orchestration layer and local-model option for the LLM service."],["RAG","Ingest, chunk, embed, search and return relevant context to the model."],["Qdrant","Vector database used for similarity search over document chunks."],["Whisper","Speech-to-text option for transcribing caller and microphone audio."],["ElevenLabs","Provider for both speech-to-text and text-to-speech."],["Kokoro","Text-to-speech option for spoken replies."],["Twilio","Telephony provider that brings phone calls into the voice pipeline."],["Docker","Docker Compose runs the whole multi-service stack."],["Swagger & Postman","API documentation and endpoint testing."]]
+};
+/* ===== helpers ===== */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('#yr').textContent=new Date().getFullYear();
+if(CONFIG.resumeUrl){const r=$('#resumeLink');r.href=CONFIG.resumeUrl;r.hidden=false}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+/* nav */
+const nav=$('#nav'),links=$('#links'),mb=$('#menu');
+mb.onclick=()=>{const o=links.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+links.addEventListener('click',e=>{if(e.target.tagName==='A'){links.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+addEventListener('keydown',e=>{if(e.key==='Escape'){links.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+addEventListener('scroll',()=>{nav.classList.toggle('s',scrollY>30);
+const tl=$('#journey').getBoundingClientRect();$('#tln').style.height=Math.max(0,Math.min($('#tl').offsetHeight,innerHeight*.6-($('#tl').getBoundingClientRect().top)))+'px'},{passive:true});
+const secs=$$('main section');
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe&&secs.forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('.links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe(s));
+const rvo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rvo.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>rvo.observe(el));
+/* about */
+$('#prin').innerHTML=CONFIG.principles.map(p=>`<div><b>${p[0]}</b><span>${p[1]}</span></div>`).join('');
+/* stars */
+const ST='<path d="M9 1.4l2.2 4.9 5.3.5-4 3.6 1.2 5.2L9 12.8 4.3 15.6l1.2-5.2-4-3.6 5.3-.5z"/>';
+const starRow=c=>`<svg viewBox="0 0 90 18" fill="${c}" aria-hidden="true">${[0,1,2,3,4].map(i=>`<g transform="translate(${i*18} 0)">${ST}</g>`).join('')}</svg>`;
+const stars=r=>`<span class="stars" role="img" aria-label="${r} out of 5 stars">${starRow('rgba(148,163,184,.28)')}<span class="f" data-w="${r/5*100}%">${starRow('#22d3ee')}</span></span>`;
+const skO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const f=e.target.querySelector('.f');f.style.width=f.dataset.w;skO.unobserve(e.target)}}),{threshold:.3});
+let cat='All',det=false;
+const ORDER=['AI / ML','Backend','Programming','Data','Tools'];CONFIG.skills.sort((a,b)=>ORDER.indexOf(a[1])-ORDER.indexOf(b[1]));const cats=['All',...ORDER];
+$('#skf').innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c==='All'}">${c}</button>`).join('');
+function renderSk(){const q=$('#sks').value.toLowerCase();const l=CONFIG.skills.filter(s=>(cat==='All'||s[1]===cat)&&s[0].toLowerCase().includes(q));
+const g=$('#skg');g.className='sk'+(det?' det':'');
+g.innerHTML=l.length?l.map(s=>`<button class="card" aria-expanded="${det}"><span class="n"><span>${esc(s[0])}</span><span class="mono" style="color:var(--cy)">${s[2].toFixed(1)}/5</span></span><span class="mono note">${s[1]}</span><br>${stars(s[2])}<span class="extra">${esc(s[3])}<br><span class="mono" style="color:var(--vi)">Used in: ${esc(s[4])}</span></span></button>`).join(''):'<p class="note">No skills match.</p>';
+$$('#skg .card').forEach(c=>{skO.observe(c);c.onclick=()=>{const o=c.classList.toggle('open');c.setAttribute('aria-expanded',o)}})}
+$('#skf').onclick=e=>{if(e.target.matches('.chip')){cat=e.target.textContent;$$('#skf .chip').forEach(b=>b.setAttribute('aria-pressed',b===e.target));renderSk()}};
+$('#sks').oninput=renderSk;
+$('#skv').onclick=e=>{det=!det;e.target.setAttribute('aria-pressed',det);e.target.textContent=det?'Compact view':'Detailed view';renderSk()};
+renderSk();
+/* projects */
+let pcat='All';const pcats=['All',...new Set(CONFIG.projects.map(p=>p[1]))];
+$('#pf').innerHTML=pcats.map(c=>`<button class="chip" aria-pressed="${c==='All'}">${c}</button>`).join('');
+function renderP(){$('#pg').innerHTML=CONFIG.projects.filter(p=>pcat==='All'||p[1]===pcat).map(p=>`<article class="card pc"><span class="mono note">${p[1]}</span><h3>${esc(p[0])}</h3><p>${esc(p[2])}</p><div class="tags">${p[3].map(t=>`<span>${t}</span>`).join('')}</div>${p[4][0]==='#'?`<a href="${p[4]}">Open the flagship ↓</a>`:`<a href="${R+p[4]}" target="_blank" rel="noopener">View on GitHub ↗</a>`}</article>`).join('');
+if(!RM&&matchMedia('(hover:hover)').matches)$$('.pc').forEach(c=>{c.onmousemove=e=>{const b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;c.style.transform=`perspective(700px) rotateY(${x*9}deg) rotateX(${-y*9}deg)`};c.onmouseleave=()=>c.style.transform=''})}
+$('#pf').onclick=e=>{if(e.target.matches('.chip')){pcat=e.target.textContent;$$('#pf .chip').forEach(b=>b.setAttribute('aria-pressed',b===e.target));renderP()}};renderP();
+/* timeline */
+$('#tl').insertAdjacentHTML('beforeend',CONFIG.timeline.map(t=>`<div class="te rv ${t[3]?'ph':''}"><span class="mono note">${t[2]||'To be added'}</span><h3>${esc(t[0])}</h3><p>${esc(t[1])}</p></div>`).join(''));
+$$('.te').forEach(el=>rvo.observe(el));
+/* architecture */
+const N={fe:[40,170,'Frontend','React / JS','v','The React client (port 5173). Sends text and audio to the gateway and renders streamed answers. Failure: network drops or blocked microphone permission.'],
+tp:[40,300,'Telephony','Twilio','v','Phone-call entry point: caller audio reaches the gateway, then flows through STT, the conversation service and TTS. Failure: dropped calls, latency on the audio stream.'],
+gw:[200,170,'Gateway','FastAPI :8000','v','Single entry point. Routes requests to internal services, forwards auth, and streams LLM output. Failure: a downstream service being unavailable surfaces here.'],
+au:[360,40,'Auth Service','JWT','v','Registration, login, password handling and JWT issuance. Failure: expired or invalid tokens.'],
+co:[360,170,'Conversation','orchestration','v','Manages conversations and messages, decides whether to consult the knowledge service, then calls the LLM service. Failure: lost context if history is not passed on.'],
+ad:[360,300,'Audio Service','STT + TTS','v','Speech layer. STT with Whisper or ElevenLabs; TTS with Kokoro or ElevenLabs, behind /audio/stt and /audio/tts. Failure: noisy or unsupported audio, provider timeouts.'],
+kn:[520,95,'Knowledge','RAG','v','Ingests documents, chunks them, creates embeddings, runs vector search and returns relevant context. Failure: poor chunking gives irrelevant context.'],
+ll:[520,230,'LLM Service','provider adapter','v','Adapter over the model providers (Groq, OpenAI, local Ollama via LangChain). Sends prompts, streams tokens back, and keeps provider details out of other services. Failure: rate limits, timeouts.'],
+qd:[650,95,'Qdrant','vector DB','v','Stores embeddings for similarity search. Failure: empty or stale index.'],
+db:[650,230,'Postgres · Redis · Kafka','infra','v','Supporting infrastructure for persistence, caching and messaging in the Docker Compose stack.']};
+const E=[['fe','gw'],['gw','au'],['gw','co'],['gw','ad'],['co','kn'],['co','ll'],['kn','qd'],['ad','co'],['tp','gw']];
+const WF={chat:['fe','gw','co','ll'],rag:['co','kn','qd','ll'],voice:['fe','tp','gw','ad','co','ll']};
+const W=104,H=52;
+$('#arch').innerHTML=E.map(([a,b])=>`<line class="ed" data-e="${a}-${b}" x1="${N[a][0]+W}" y1="${N[a][1]+H/2}" x2="${N[b][0]}" y2="${N[b][1]+H/2}"/>`).join('')+Object.entries(N).map(([k,n])=>`<g class="nd ${n[4]==='c'?'cn':''}" data-k="${k}" tabindex="0" role="button" aria-label="${n[2]}"><rect x="${n[0]}" y="${n[1]}" width="${W}" height="${H}" rx="9"/><text x="${n[0]+10}" y="${n[1]+22}" style="font-weight:700">${n[2].length>14?n[2].slice(0,13)+'…':n[2]}</text><text x="${n[0]+10}" y="${n[1]+40}" style="fill:var(--mu);font-size:10.5px">${n[3]}</text></g>`).join('');
+function pick(k){const n=N[k];$$('.nd').forEach(g=>g.classList.toggle('sel',g.dataset.k===k));
+$('#det').innerHTML=`<p class="mono eb">Component</p><h4>${n[2]}</h4><span class="tag v">Core component</span><p>${n[5]}</p>`}
+function wf(w){$$('.chip[data-wf]').forEach(c=>c.classList.toggle('on',c.dataset.wf===w));const s=WF[w];
+$$('.nd').forEach(g=>g.classList.toggle('dim',!!s&&!s.includes(g.dataset.k)));
+$$('.ed').forEach(e=>{const[a,b]=e.dataset.e.split('-');e.classList.toggle('hot',!!s&&s.includes(a)&&s.includes(b))})}
+$('#arch').addEventListener('click',e=>{const g=e.target.closest('.nd');if(g)pick(g.dataset.k)});
+$('#arch').addEventListener('keydown',e=>{const g=e.target.closest('.nd');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pick(g.dataset.k)}});
+$('#arch').addEventListener('mouseover',e=>{const g=e.target.closest('.nd');if(g)pick(g.dataset.k)});
+$$('.chip[data-wf]').forEach(c=>c.onclick=()=>wf(c.dataset.wf==='all'?null:c.dataset.wf));
+$('#rst').onclick=()=>{wf(null);$$('.nd').forEach(g=>g.classList.remove('sel'));$('#det').innerHTML='<p class="mono eb">Component</p><h4>Select a node</h4><p>Hover, focus or click a node.</p>'};
+/* demo (simulated) */
+const KB=[{k:['retriev','rag','knowledge','document','search','vector'],t:'Documents are processed, split into chunks, embedded, and stored in a vector database. A question is embedded the same way and the closest chunks are returned as context.',s:'kb/rag-pipeline (sample chunk)',c:['chunk: document ingestion & chunking','chunk: embedding + vector search']},
+{k:['voice','speech','audio','stt','tts','speak','phone','call','twilio'],t:'Speech is transcribed to text (Whisper or ElevenLabs), handled by the same conversation workflow as typed chat, and the reply can be synthesised back to speech (Kokoro or ElevenLabs). Calls arrive over a telephone line via Twilio.',s:'kb/voice-flow (sample chunk)',c:['chunk: speech-to-text','chunk: text-to-speech']},
+{k:['llm','provider','model','groq','openai','ollama'],t:'Model access sits behind a separate LLM service so the provider can change without touching other services: Groq, OpenAI or a local model through Ollama, orchestrated with LangChain.',s:'kb/llm-service (sample chunk)',c:['chunk: provider isolation','chunk: streaming']}];
+const chat=$('#chat');
+function say(c,t,x){const d=document.createElement('div');d.className='m '+c;d.innerHTML=esc(t)+(x?`<span class="src">${esc(x)}</span>`:'');chat.appendChild(d);chat.scrollTop=1e9}
+say('a','Sample assistant (simulation). Try a suggested question or type your own.');
+function ask(q){say('u',q);const l=q.toLowerCase();const h=KB.find(e=>e.k.some(k=>l.includes(k)));
+setTimeout(()=>{if(h){say('a',h.t,'Source: '+h.s);$('#ctx').innerHTML=h.c.map(c=>`<div class="mono" style="color:var(--vi);padding:3px 0">▸ ${c}</div>`).join('');
+setTimeout(()=>say('a','Follow-up: want to see how this fits into the architecture diagram above?'),500)}else{say('a','The simulation only knows about retrieval, voice and LLM providers. Try one of those.');$('#ctx').textContent='No sample chunks matched.'}},RM?0:450)}
+$('#askf').onsubmit=e=>{e.preventDefault();const v=$('#q').value.trim();if(v){$('#q').value='';ask(v)}};
+$$('[data-s]').forEach(b=>b.onclick=()=>ask(b.dataset.s));
+$('#vz').innerHTML=Array.from({length:22},(_,i)=>`<i style="animation-delay:${(i*70)%800}ms"></i>`).join('');
+$('#vb').onclick=e=>{const o=$('#vz').classList.toggle('on');e.target.setAttribute('aria-pressed',o);if(o)wf('voice');else wf(null)};
+/* tech chips */
+$('#tech').innerHTML=CONFIG.tech.map((t,i)=>`<button class="chip" data-i="${i}">${t[0]}</button>`).join('');
+$('#tech').onclick=e=>{const b=e.target.closest('[data-i]');if(!b)return;const t=CONFIG.tech[b.dataset.i];$$('#tech .chip').forEach(c=>c.classList.toggle('on',c===b));$('#techd').textContent=t[1]};
+/* 3D */
+function webgl(){try{return !!document.createElement('canvas').getContext('webgl')}catch(e){return false}}
+function scene(host,size,opts){if(!window.THREE||!webgl()||RM)return null;
+const mob=innerWidth<800,n=opts.n*(mob?.5:1);const r=new THREE.WebGLRenderer({antialias:!mob,alpha:true});r.setPixelRatio(Math.min(devicePixelRatio,mob?1.5:2));host.appendChild(r.domElement);
+const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(55,1,.1,100);cam.position.z=opts.z;const g=new THREE.Group();sc.add(g);
+const pts=[];for(let i=0;i<n;i++){const v=new THREE.Vector3().randomDirection().multiplyScalar(opts.r*(.55+Math.random()*.6));pts.push(v)}
+const pg=new THREE.BufferGeometry().setFromPoints(pts);g.add(new THREE.Points(pg,new THREE.PointsMaterial({color:0x22d3ee,size:opts.ps,transparent:true,opacity:.9})));
+const ls=[];for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)if(pts[i].distanceTo(pts[j])<opts.r*.62)ls.push(pts[i],pts[j]);
+g.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(ls),new THREE.LineBasicMaterial({color:0x5b7fb0,transparent:true,opacity:.28})));
+const core=new THREE.Mesh(new THREE.IcosahedronGeometry(opts.r*.38,1),new THREE.MeshBasicMaterial({color:0x8b7cf6,wireframe:true,transparent:true,opacity:.6}));g.add(core);
+let mx=0,my=0,vis=true,raf;const rs=()=>{const w=host.clientWidth,h=host.clientHeight;r.setSize(w,h,false);r.domElement.style.cssText='width:100%;height:100%';cam.aspect=w/h;cam.updateProjectionMatrix()};rs();addEventListener('resize',rs);
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5},{passive:true});
+document.addEventListener('visibilitychange',()=>{vis=!document.hidden;if(vis)loop()});
+function loop(){if(!vis)return;g.rotation.y+=.0018;core.rotation.x+=.004;g.rotation.x+=((my*.5)-g.rotation.x)*.04;g.position.x+=((opts.x+mx*.6)-g.position.x)*.04;g.position.y+=((opts.scroll?(-scrollY*.0006):0)-g.position.y)*.05;r.render(sc,cam);raf=requestAnimationFrame(loop)}loop();return true}
+const bgOK=scene($('#bg'),0,{n:70,r:3.2,z:7,ps:.07,x:2.2,scroll:true});
+if(!bgOK){$('#bg').style.background+=''}
+const cvH=document.createElement('div');cvH.style.cssText='width:140px;height:140px;margin:0 auto';$('#cv').replaceWith(cvH);
+if(!scene(cvH,0,{n:26,r:1.6,z:4,ps:.06,x:0}))cvH.innerHTML='<div style="width:100%;height:100%;border:1px solid var(--cy);border-radius:50%;opacity:.4"></div>';
+(function(){const c=$('#dots'),x=c.getContext('2d');let w,h,P=[];const m={x:-999,y:-999};
+function init(){w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:innerWidth<800?50:120},()=>({x:Math.random()*w,y:Math.random()*h,bx:(Math.random()-.5)*.3,by:(Math.random()-.5)*.3,ex:0,ey:0,r:Math.random()*1.1+.4}))}
+init();addEventListener('resize',init);addEventListener('pointermove',e=>{m.x=e.clientX;m.y=e.clientY},{passive:true});
+function draw(){x.clearRect(0,0,w,h);for(const p of P){const dx=m.x-p.x,dy=m.y-p.y,d=Math.hypot(dx,dy)||1;
+if(d<170&&!RM){const f=(170-d)/170;p.ex+=dx/d*f*.09;p.ey+=dy/d*f*.09;x.strokeStyle='rgba(255,255,255,'+f*.35+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}
+p.x+=p.bx+p.ex;p.y+=p.by+p.ey;p.ex*=.93;p.ey*=.93;if(p.x<0)p.x=w;if(p.x>w)p.x=0;if(p.y<0)p.y=h;if(p.y>h)p.y=0;
+x.fillStyle='rgba(255,255,255,.75)';x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill()}
+if(!RM&&!document.hidden)requestAnimationFrame(draw)}
+draw();document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!RM)draw()})})();
+</script>
+</body></html>
