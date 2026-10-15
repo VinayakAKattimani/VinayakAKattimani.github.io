@@ -2,10 +2,10 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vinayak Kattimani — AI Engineer</title>
+<title>Vinayak Kattimani — AI &amp; Python Engineer</title>
 <meta name="description" content="Vinayak Kattimani, AI and Python engineer building LLM applications, RAG, voice and telephony AI, and FastAPI backends. Flagship: Thenflo.">
-<meta property="og:title" content="Vinayak Kattimani — AI Engineer">
-<meta property="og:description" content="LLM applications, RAG, voice AI and FastAPI backends. Flagship: Thenflo.">
+<meta property="og:title" content="Vinayak Kattimani — AI &amp; Python Engineer">
+<meta property="og:description" content="AI and Python engineer building LLM applications, RAG, voice AI and FastAPI backends. Flagship: Thenflo.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307101c'/%3E%3Cpath d='M14 16l12 32 6-14M50 16L34 48' stroke='%2322d3ee' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -127,6 +127,12 @@ footer a{text-decoration:none}
 .prov{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:30px 0 0;border:1px solid var(--ln);border-radius:14px;overflow:hidden;background:var(--gl)}
 .prov div{padding:14px 18px;border-right:1px solid var(--ln)}.prov b{display:block;color:var(--cy);font-weight:500;font-size:.72rem}.prov span{font-size:.95rem}
 details{border-bottom:1px solid var(--ln);padding:16px 0}summary{cursor:pointer;font-size:1.15rem;font-weight:500;list-style:none;display:flex;gap:16px;align-items:baseline}summary::-webkit-details-marker{display:none}summary i{font-style:normal;color:var(--cy);font-family:'JetBrains Mono',monospace;font-size:.8rem}details p{color:var(--mu);max-width:70ch;margin:10px 0 0 40px}details[open] summary{color:var(--cy)}
+dialog{background:#0c1424;color:var(--tx);border:1px solid var(--ln);border-radius:16px;padding:26px;width:min(440px,92vw)}
+dialog::backdrop{background:rgba(3,6,12,.72);backdrop-filter:blur(4px)}
+dialog h3{margin:0 0 4px;font-size:1.3rem}dialog label{display:block;margin-top:14px;font-size:.85rem;color:var(--mu)}
+dialog input,dialog textarea{width:100%;margin-top:5px;background:rgba(255,255,255,.04);border:1px solid var(--ln);border-radius:10px;color:var(--tx);padding:10px 12px;font:inherit}
+dialog textarea{min-height:84px;resize:vertical}.dr{display:flex;gap:10px;margin-top:20px;align-items:center}
+#fmsg{margin-top:12px;font-size:.9rem;min-height:1.3em}#fmsg.ok{color:var(--ok)}#fmsg.er{color:#f87171}.hp{position:absolute;left:-9999px}
 </style></head>
 <body>
 <div id="bg" aria-hidden="true"><canvas id="dots"></canvas><div class="grid"></div></div>
@@ -169,8 +175,8 @@ details{border-bottom:1px solid var(--ln);padding:16px 0}summary{cursor:pointer;
 
 <section id="thenflo"><div class="tf">
 <p class="mono eb">Flagship · Thenflo</p>
-<div class="tfh"><h2>Thenflo</h2><div class="btns" style="margin:0"><a class="btn p" href="https://github.com/VinayakAKattimani/thenflo" target="_blank" rel="noopener">View Source Code ↗</a><a class="btn" href="#arch">Technical Breakdown</a></div></div>
-<p class="lead" style="margin-top:18px">An LLM-powered conversational AI project: text and voice conversations backed by document retrieval, split into independently runnable FastAPI services. </p><div class="prov mono"><div><b>LLM</b><span>Groq · OpenAI · Ollama</span></div><div><b>STT</b><span>Whisper · ElevenLabs</span></div><div><b>TTS</b><span>Kokoro · ElevenLabs</span></div><div><b>Telephony</b><span>Twilio</span></div><div><b>Retrieval</b><span>Qdrant</span></div><div><b>Backend</b><span>FastAPI · Docker</span></div></div>
+<div class="tfh"><h2>Thenflo</h2><div class="btns" style="margin:0"><button class="btn p" id="wtBtn" type="button">Request a walkthrough ↗</button><a class="btn" href="#arch">Technical Breakdown</a></div></div>
+<p class="lead" style="margin-top:18px">A conversational AI product I am building toward a startup: text and voice conversations backed by document retrieval, split into independently runnable FastAPI services. </p><div class="prov mono"><div><b>LLM</b><span>Groq · OpenAI · Ollama</span></div><div><b>STT</b><span>Whisper · ElevenLabs</span></div><div><b>TTS</b><span>Kokoro · ElevenLabs</span></div><div><b>Telephony</b><span>Twilio</span></div><div><b>Retrieval</b><span>Qdrant</span></div><div><b>Backend</b><span>FastAPI · Docker</span></div></div>
 <div class="four">
 <div><h3>The problem</h3><p>Useful assistants need relevant answers, preserved context and consistent behaviour — plus speech, retrieval and provider integrations beyond plain text generation.</p></div>
 <div><h3>The approach</h3><p>Separate services for gateway, auth, conversation, knowledge, LLM and audio, so each responsibility is isolated and the LLM provider can change independently.</p></div>
@@ -210,6 +216,16 @@ details{border-bottom:1px solid var(--ln);padding:16px 0}summary{cursor:pointer;
 <footer><span><a class="vk" href="#home">VK</a> &nbsp;Vinayak Kattimani · AI &amp; Python Engineer</span>
 <span><a href="https://github.com/VinayakAKattimani" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/vinayakkattimani/" target="_blank" rel="noopener">LinkedIn</a> · © <span id="yr"></span> · <a href="#home">Back to top ↑</a></span></footer>
 
+<dialog id="wt" aria-labelledby="wth"><form id="wtf" novalidate>
+<h3 id="wth">Request a Thenflo walkthrough</h3><p class="note" style="margin:0">Tell me a little about you and I'll get back to you by email.</p>
+<label>Name *<input name="name" required autocomplete="name"></label>
+<label>Email *<input name="email" type="email" required autocomplete="email"></label>
+<label>Contact number<input name="phone" type="tel" autocomplete="tel"></label>
+<label>What would you like to see?<textarea name="message"></textarea></label>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="dr"><button class="btn p" id="wts" type="submit">Send</button><button class="btn" type="button" id="wtc">Cancel</button></div>
+<div id="fmsg" role="status" aria-live="polite"></div>
+<p class="note" style="margin:10px 0 0">Your details are used only to reply to this request.</p></form></dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 /* ===== CENTRAL CONFIG — edit here ===== */
@@ -368,5 +384,15 @@ p.x+=p.bx+p.ex;p.y+=p.by+p.ey;p.ex*=.93;p.ey*=.93;if(p.x<0)p.x=w;if(p.x>w)p.x=0;
 x.fillStyle='rgba(255,255,255,.75)';x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill()}
 if(!RM&&!document.hidden)requestAnimationFrame(draw)}
 draw();document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!RM)draw()})})();
+(function(){const d=$('#wt'),f=$('#wtf'),m=$('#fmsg'),s=$('#wts');
+$('#wtBtn').onclick=()=>{m.textContent='';m.className='';d.showModal()};$('#wtc').onclick=()=>d.close();
+d.addEventListener('click',e=>{if(e.target===d)d.close()});
+f.onsubmit=async e=>{e.preventDefault();const v=Object.fromEntries(new FormData(f));
+if(!v.name.trim()||!/^\S+@\S+\.\S+$/.test(v.email)){m.className='er';m.textContent='Please enter your name and a valid email.';return}
+if(v._honey)return;s.disabled=true;s.textContent='Sending…';m.className='';m.textContent='';
+try{const r=await fetch('https://formsubmit.co/ajax/vinayarunkattimani@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:v.name,email:v.email,phone:v.phone||'-',message:v.message||'-',_subject:'Thenflo walkthrough request from '+v.name,_template:'table',_captcha:'false'})});
+const j=await r.json();if(r.ok&&(j.success===true||j.success==='true')){m.className='ok';m.textContent='Thanks! Your request was sent. I will reply by email.';f.reset();setTimeout(()=>d.close(),2800)}else throw 0}
+catch(x){m.className='er';m.innerHTML='Could not send. Please email <a href="mailto:vinayarunkattimani@gmail.com">vinayarunkattimani@gmail.com</a> directly.'}
+s.disabled=false;s.textContent='Send'}})();
 </script>
 </body></html>
